@@ -1,0 +1,47 @@
+reate a class called Range which has the following members-
+
+Range:
+  contains()
+  overlaps()
+  disjoint()
+  touching()
+  lessThan()
+For example:
+r1 = Range(4, 9) => [4,5,6,7,8]
+r2 = Range(4) => [0,1,2,3]
+contains():
+
+It take a subrange as the argument and check if the subrange is present in the class Range. If yes, return True else return False.
+ 
+For example:
+r1.contains(Range(3, 4)) = False
+r2.contains(Range(3, 4)) = True
+overlaps():
+
+It take a subrange as the argument and finds if there is any overlap between the two ranges
+ 
+For example:
+r1.overlaps(Range(3, 4)) = False
+r2.overlaps(Range(3, 4)) = True
+disjoint():
+
+It take a subrange as the argument and check if there is any overlap between the two ranges. If two ranges do not overlap that means it is disjoint and hence it returns True
+ 
+For example:
+r1.disjoint(Range(3, 4)) = True
+r2.disjoint(Range(3, 4)) = False
+touching():
+
+It take a subrange as the argument and check if there if the start of one touch the end of second or vice-versa
+ 
+For example:
+r1.touching(Range(3, 4)) = True
+r2.touching(Range(3, 4)) = False
+lessThan():
+
+Returns True if the length of the super range is less than the length of the sub range
+ 
+For example:
+r1.lessThan(Range(3, 4)) = False, since r1 is starting from 4 > 3
+r2.lessThan(Range(3, 4)) = True, since r2 is starting from 0 < 3
+Note: Think of the edge cases.
