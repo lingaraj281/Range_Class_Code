@@ -61,7 +61,7 @@ class Range():
         self.n8 = n8
         self.n9 = n9
         self.data4 = list(range(self.n8, self.n9))
-        if len(self.data) > len(self.data4) and self.data4[0] > self.data[0]:
+        if (len(self.data) > len(self.data4)) and (self.data4[0] > self.data[0]):
             print("True")
         else:
             print("False")
