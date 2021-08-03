@@ -49,49 +49,40 @@ class Range():
         self.n7 = n7
         self.n8 = n8
         self.data3 = list(range(self.n7, self.n8))
-        if (self.data[0] == self.data3[-1]) or (self.data[-1] == self.data3[0]):
-            print("True")
-        else:
-            print("False")
+        # if (self.data3[-1] + 1 == self.data[0]) or [self.data[-1] + 1 == self.data3[0]]:
+        #     print("True")
+        # else:
+        #     print("False")
+        print(self.data3[-1] + 1 == self.data[0])
 
     # True if the length of the super range is less than the length of the sub range
+
     def lessThan(self, n8, n9):
         self.n8 = n8
         self.n9 = n9
         self.data4 = list(range(self.n8, self.n9))
-        if len(self.data) < len(self.data4):
-            print("True")
-        else:
-            print("False")
-
-    # True if first member of superrange is lessthan first member of sub range
-    def lessThan2(self, n10, n11):
-        self.n10 = n10
-        self.n11 = n11
-        self.data5 = list(range(self.n10, self.n11))
-        if self.data[0] < self.data5[0]:
+        if len(self.data) > len(self.data4) and self.data4[0] > self.data[0]:
             print("True")
         else:
             print("False")
 
 
-e = Range(n1=4, n2=9)
-f = Range(4)
+r1 = Range(n1=4, n2=9)
+r2 = Range(4)
 
-e.contains(3, 4)
-f.contains(3, 4)
+r1.contains(3, 4)
+r2.contains(3, 4)
 
-e.overlaps(3, 4)
-f.overlaps(3, 4)
+r1.overlaps(3, 4)
+r2.overlaps(3, 4)
 
-e.disjoint(3, 4)
-f.disjoint(3, 4)
+r1.disjoint(3, 4)
+r2.disjoint(3, 4)
 
-e.touching(3, 4)
-f.touching(3, 4)
 
-e.lessThan(3, 4)
-f.lessThan(3, 4)
+r1.touching(3, 4)
+r2.touching(3, 4)
 
-e.lessThan2(3, 4)
-f.lessThan2(3, 4)
+
+r1.lessThan(3, 4)
+r2.lessThan(3, 4)
